@@ -1,8 +1,27 @@
 public class Pilota extends Thread  implements Comparable <Pilota>{
+    /**
+     * This class is for the pilot and use thread and implements Comparable
+     * 
+     * @param nome is the name of the pilot
+     * @param tempo is the time about the pilot's race
+     * @param semaforo is for the thread
+     * @param spogliatoio is were the pilot go to change his dresses
+     * 
+     * 
+     */
     private String nome;
     private long tempo;
     Semaforo uno;
     Spogliatoio s = new Spogliatoio();
+
+
+      /**
+     * Creates a Pilota 
+     * @param nome
+     * @param semaforo
+     * @param spogliatoio 
+     * 
+     */
 
     public Pilota(String n,Semaforo u, Spogliatoio a)
     {
@@ -10,7 +29,12 @@ public class Pilota extends Thread  implements Comparable <Pilota>{
         uno = u;
         s = a;
     }
+  
 
+    /**
+     * @Override run()
+     * 
+     */
     @Override
     public void run()
     {
@@ -25,11 +49,19 @@ public class Pilota extends Thread  implements Comparable <Pilota>{
         uno.v();
     }
 
+    /**
+     * Gets the name about the pilot
+     * @return the pilot's name
+     */
     public String getNome()
     {
         return nome;
     }
 
+    /**
+     * Calculate the time about the race of the pilot
+     * @return the pilot's time in  tte race 
+     */
     public long gara()
     {
         System.out.println(" ");
@@ -54,11 +86,18 @@ public class Pilota extends Thread  implements Comparable <Pilota>{
 
         return tempo;
     }
-
+/**
+ * Gets the time about race
+ * @return the time about race
+ */
     public long getTempo()
     {
         return tempo;
     }
+    /**
+     * @Override compareTo
+     * 
+     */
     @Override
     public int compareTo(Pilota o) {
         
