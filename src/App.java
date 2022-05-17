@@ -28,16 +28,21 @@ public class App {
         p9.start();
         p10.start();
 
-        p1.gara();
-        p2.gara();
-        p3.gara();
-        p4.gara();
-        p5.gara();
-        p6.gara();
-        p7.gara();
-        p8.gara();
-        p9.gara();
-        p10.gara();
+      
+        p1.join();
+        p2.join();
+        p3.join();
+        p4.join();
+        p5.join();
+        p6.join();
+        p7.join();
+        p8.join();
+        p9.join();
+        p10.join();
+
+      
+
+
        
         c.Aggiungi(p1);
         c.Aggiungi(p2);
@@ -50,16 +55,7 @@ public class App {
         c.Aggiungi(p9);
         c.Aggiungi(p10);
 
-        p1.join();
-        p2.join();
-        p3.join();
-        p4.join();
-        p5.join();
-        p6.join();
-        p7.join();
-        p8.join();
-        p9.join();
-        p10.join();
+        
         
         System.out.println("FINE GARA");
 
@@ -68,7 +64,7 @@ public class App {
 
         for(int i = 0; i < c.getSize(); i++)
         {
-            System.out.println(i+1  + " :" + " " + c.getPilota(i).getNome());
+            System.out.println(i+1  + " :" + " " + c.getPilota(i).getNome() +" tempo:" + c.getPilota(i).getTempo());
         }
         
     }
