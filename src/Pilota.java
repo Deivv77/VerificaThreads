@@ -19,7 +19,12 @@ public class Pilota extends Thread  implements Comparable <Pilota>{
         uno.v();
     }
 
-    public long gara(Pilota p)
+    public String getNome()
+    {
+        return nome;
+    }
+
+    public long gara()
     {
         long inizio = System.nanoTime();
         for(int i =0 ; i< 15 ; i++)
@@ -35,7 +40,7 @@ public class Pilota extends Thread  implements Comparable <Pilota>{
         long fine = System.nanoTime();
         tempo = (fine-inizio) / 1000000;
 
-        s.usa(p.getName());
+        s.usa(this.getNome());
 
         return tempo;
     }
